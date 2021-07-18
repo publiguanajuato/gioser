@@ -1,0 +1,1186 @@
+﻿<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' 
+
+crossorigin='anonymous'>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<head>
+
+<style>
+ .modal-backdrop
+{
+    opacity:0.01 !important;
+}
+.btnconfig {
+   border: 2px solid white;
+  background-color: lightwhite;
+  color: black;
+  padding: 14px 28px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Gray */
+.default {
+  border-color: #e7e7e7;
+  color: black;
+}
+
+.default:hover {
+  background-color: lightgrey;
+}
+}
+.btn {
+  border: 2px solid black;
+  background-color: lightwhite;
+  color: black;
+  padding: 14px 28px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+
+/* Gray */
+.default {
+  border-color: #e7e7e7;
+  color: black;
+}
+
+.default:hover {
+  background-color: lightgrey;
+}
+</style>
+
+</head>
+<body  class=" w3-center   ">
+
+
+<div class=" w3-panel w3-card "  style="width:100%">
+
+<div style="float:left; padding-left:8px; width:10%"><button  id="abre" class="btnconfig"><i class="fa fa-wheelchair"></i></button></div>
+<div id="img" class=" w3-panel w3-card  w3-center  "  style="width:100%">
+
+<div class="w3-content  w3-center  w3-animate-opacity"  style="width:100%">
+<a href="index.php"><img class="column" src="images/logo-leon.svg" style="width:120px;height:120px;" alt="#LeónCiudadDePrimera"></a>
+
+<div id="div1" class="w3-panel w3-card   w3-center  w3-animate-opacity"  style="width:100%">
+
+
+
+<button  id="cierra" class="btn default"><h4>X</h4></button>
+<button  id="mas" onclick="zoomIn()" class="btn default"><h4>+</h4></button>
+<button  id="menos" onclick="zoomOut()" class="btn default"><h1>-</h1></button>
+
+<button onclick="myFunction()"class="btn default">T1</button>
+<button onclick="myFunctionuno()" class="btn default">T2</button>
+<button onclick="myFunctiontres()"class="btn default">T3</button>
+<button onclick="myFunctioncuatro()" class="btn default">T4</button>
+<button onclick="myFunctiondos()" class="btn default"></a>T5</button>
+<button onclick="myFunctioncinco()" class="btn default"></a>T6</button>
+<button onclick="myFunctionseis()" class="btn default"></a>T7</button>
+
+<button onclick="griscero()"class="btn default">B-</button>
+<button onclick="grisuno()"class="btn default">B+</button>
+<button onclick="grisdos()" class="btn default">B++</button>
+<button onclick="gristres()"class="btn default">B+++</button>
+<button onclick="blanco()" class="btn default">B++++</button>
+
+
+</div>
+</div>
+
+<br>
+
+<div class="      w3-center  ">
+
+<a   href=""data-toggle="modal" data-target="#convenios"><img src="BOTONES/CONVENIOS-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"> </a> 
+<a href=""data-toggle="modal" data-target="#CONVOCATORIAS"><img src="BOTONES/CONVOCA-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;">
+
+
+<a href=""data-toggle="modal" data-target="#GASTOS"><img src="BOTONES/GASTOS-BTN_3.svg" alt="HTML tutorial" style="width:140px;height:140px;"> 
+<a href=""data-toggle="modal" data-target="#INFORMACION"><img src="images/INFORMACION-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"> 
+
+<a    href=""data-toggle="modal" data-target="#FINANZAS"><img src="BOTONES/FINANZAS-BTN_2.svg" alt="HTML tutorial" style="width:140px;height:140px;"></a>
+<a  href=""data-toggle="modal" data-target="#PRESUPUESTO"><img src="BOTONES/PRESUPUESTOHOY.svg" alt="HTML tutorial" style="width:140px;height:140px;"></a>
+<a   href=""data-toggle="modal" data-target="#REGISTROS"><img src="BOTONES/REGISTROS-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"> 
+<a href=""data-toggle="modal" data-target="#MANUALES"><img src="BOTONES/MANUALES-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;">
+<a   href=""data-toggle="modal" data-target="#NORMATIVIDAD"><img src="BOTONES/NORMATIVIDAD-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"> </a> 
+<a  href=""data-toggle="modal" data-target="#personal"><img src="BOTONES/POLITICAS-BTN_1.svg" alt="HTML tutorial" style="width:140px;height:140px;"> 
+<a href=""data-toggle="modal" data-target="#ANTICORRUPCION"><img src="BOTONES/CORRUPCIÓN-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;">
+
+<a    href=""data-toggle="modal" data-target="#SOPORTE"><img src="BOTONES/SOPORTE-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"></a>
+<a    href=""data-toggle="modal" data-target="#NOMINA"><img src="BOTONES/NOMINA-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"></a>
+
+<a  href=""data-toggle="modal" data-target="#CALENDARIO"><img src="BOTONES/CALENDARIO-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"></a>
+<a href=""data-toggle="modal" data-target="#VALIDACIONES"><img src="BOTONES/VALIDACIONES-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;">  
+
+<a href=""data-toggle="modal" data-target="#DIRECTORIO"><img src="BOTONES/DIRECTORIO-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;">
+
+<a href=""data-toggle="modal" data-target="#BANCOS"><img src="BOTONES/BANCOS-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;">  
+<a href=""data-toggle="modal" data-target="#CAPACITACION"><img src="BOTONES/CAPACITACION-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"> 
+
+
+<a href=""data-toggle="modal" data-target="#EFLOW"><img src="BOTONES/EFLOW-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;">
+<a href=""data-toggle="modal" data-target="#ENTERATE"><img src="BOTONES/ENTERATE.svg" alt="HTML tutorial" style="width:140px;height:140px;">
+
+<a href="default.asp"data-toggle="modal" data-target="#CONSTANCIAS"><img src="images/CONSTANCIAS-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"> 
+<a href=""data-toggle="modal" data-target="#EVENTOS"><img src="BOTONES/EVENTOS-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;">
+
+
+<a href=""data-toggle="modal" data-target="#FORMATOS"><img src="images/FORMDOCTOS-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"> 
+<a href=""data-toggle="modal" data-target="#dependencias"><img src="BOTONES/DEPENDENCIAS-BTN.svg" alt="HTML tutorial" style="width:140px;height:140px;"> 
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- PERSONAL-->
+  <div class="modal fade" id="personal">
+    <div class="modal-dialog modal-xl modal-dialog-centered   animate-bottom">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"> INTRANET 2021</h4>
+
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body  -->
+        <div class="modal-body">
+       <div class="w3-panel w3-white w3-xlarge">
+<p><iframe  src="POLITICAS-PERSONAL-2021.html"  class="w3-card embed-responsive embed-responsive-16by9"  style="border:none;" height="1900px" width="1100px"  class="  animate-zoom"></iframe>
+</div> 
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+<!-- GASTOS-COMPROBAR -->
+  <div class="modal fade" id="GASTOS"   >
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">EGRESOS 2021 </h4>
+          <button onclick="pauseAudio()" type="button" class="close" data-dismiss="modal">&times;</button>
+
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body"  >
+<br>
+        <p><iframe  src="GASTOS-COMPROBAR3.html"  class="w3-card embed-responsive embed-responsive-16by9"  style="border:none;" height="400px" width="100%"  class="LEFT  animate-zoom"></iframe>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- NORMATIVIDAD-->
+   <div class="modal fade" id="NORMATIVIDAD">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div  class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"> INTRANET 2021</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body" id="NORMA">
+
+          <p><iframe    src="NORMATIVIDAD2021.html"  class="w3-card embed-responsive embed-responsive-16by9"   style="border:none;" height="3000px" width="100%"  class="LEFT  animate-top"></iframe>
+</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<!-- INFORMACION FISCAL-->
+  <div class="modal fade" id="INFORMACION">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"> INTRANET 2021</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+ <p><iframe  src="INFORMACION-FISCAL2.html"  class="w3-card embed-responsive embed-responsive-16by9"   style="border:none;" height="3000px" width="100%"  class="LEFT  animate-top"></iframe>
+
+
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FINANZAS -->
+  <div class="modal fade" id="FINANZAS">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"> INTRANET 2021</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+           <p><iframe  src="FINANZAS-2021.html" class="w3-card embed-responsive embed-responsive-16by9" style="border:none;" height="1000px" width="100%"  class="LEFT  animate-top"></iframe></p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- PRESUPUESTO-->
+  <div class="modal fade" id="PRESUPUESTO">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"> INTRANET 2021</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p><iframe  src="PRESUPUESTO-2021.html" class="w3-card embed-responsive embed-responsive-16by9" style="border:none;" height="1200px" width="100%"  class="LEFT  animate-top"></iframe>
+</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- REGISTROS CONTABLES-->
+  <div class="modal fade" id="REGISTROS">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"> INTRANET 2021</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p><iframe  src="REGISTROS-CONTABLES.html" class="w3-card embed-responsive embed-responsive-16by9" style="border:none;" height="400px" width="100%"  class="LEFT  animate-top"></iframe>
+</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- SOPORTE-->
+  <div class="modal fade" id="SOPORTE">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"> INTRANET 2021</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p><iframe  src="https://soporte.leon.gob.mx/public/soporte_ti/" class="w3-card embed-responsive embed-responsive-16by9" style="border:none;" height="400px" width="100%"  class="LEFT  animate-top"></iframe>
+</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- NOMINA-->
+  <div class="modal fade" id="NOMINA">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"> INTRANET 2021</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+<BR><BR><BR>
+          <p><iframe  src="https://sistemas.leon.gob.mx/nominacfdi/" class="w3-card embed-responsive embed-responsive-16by9" style="border:none;" height="600px" width="100%"  class="LEFT  animate-top"></iframe>
+</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<!-- CALENDARIO-->
+  <div class="modal fade" id="CALENDARIO">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"> INTRANET 2021</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<img src="images/calendario-de-nomina-2021-.jpg" alt="HTML tutorial" style="width:945px;height:745px;" class="w3-card embed-responsive embed-responsive-16by9">
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- CALENDARIO-->
+  <div class="modal fade" id="VALIDACIONES">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Sistema de Validaciones Técnicas y de Servicios</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<p><iframe  src="https://validaciones.leon.gob.mx/tecnologias/Account/Login" class="w3-card embed-responsive embed-responsive-16by9" style="border:none;" height="600px" width="100%"  class="LEFT  animate-top"></iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- CONSTANCIAS LABORALES-->
+  <div class="modal fade" id="CONSTANCIAS">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">CONSTANCIAS LABORALES</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<iframe 	id="blockrandom"
+	name=""
+	src="https://www.leon.gob.mx/di/constancias/"
+	width="100%"
+	height="680"
+	scrolling="auto"
+	frameborder="0"
+	class="wrapper" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- INFORMACION DE BANCOS-->
+  <div class="modal fade" id="BANCOS">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">INFORMACION DE BANCOS</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<iframe 	id="blockrandom"
+	name=""
+	src="BANCOS.html"
+	width="100%"
+	height="1000"
+	scrolling=""
+	frameborder="0"
+	class="wrapper" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- MANUALES-->
+  <div class="modal fade" id="MANUALES">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>EGRESOS
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<p><iframe 	
+	name=""
+	src="MANUALES-2021.html"
+	width="100%"
+	height="1200"
+	scrolling=""
+	frameborder="0"
+	class="" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- EVENTOS INSTITUCIONALES-->
+  <div class="modal fade" id="EVENTOS">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>EVENTOS INSTITUCIONALES
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<p><iframe 	
+	name=""
+	src="EVENTOS-INSTITUCIONALES.html"
+	width="100%"
+	height="1200"
+	scrolling=""
+	frameborder="0"
+	class="" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!-- EFLOW-->
+  <div class="modal fade" id="EFLOW">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>Aplicaciones y Servicios  EFLOW
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<p><iframe 	
+	name=""
+	src="https://eflow.leon.gob.mx/cgi-bin/eflow/start.cgi.html"
+	width="100%"
+	height="600"
+	scrolling=""
+	frameborder="0"
+	class="" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- FORMATOS  Y DOCUMENTOS-->
+  <div class="modal fade" id="FORMATOS">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Formatos y Documentos</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<p><iframe 	
+	name=""
+	src="formatos.html"
+	width="100%"
+	height="600"
+	scrolling=""
+	frameborder="0"
+	class="" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- CONVOCATORIAS-->
+  <div class="modal fade" id="CONVOCATORIAS">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">CONVOCATORIAS</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<p><iframe 	
+	name=""
+	src="convocatorias.html"
+	width="100%"
+	height="600"
+	scrolling=""
+	frameborder="0"
+	class="" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- ANTICORRUPCIÓN-->
+  <div class="modal fade" id="ANTICORRUPCION">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">ANTICORRUPCIÓN</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<p><iframe 	
+	name=""
+	src="ANTICORRUPCION.html"
+	width="100%"
+	height="600"
+	scrolling=""
+	frameborder="0"
+	class="" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+  <!-- DIRECTORIO TEL-->
+  <div class="modal fade" id="DIRECTORIO">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Directorio Tel.</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<p><iframe 	
+	name=""
+	src="DIRECTORIO.html"
+	width="100%"
+	height="2300"
+	scrolling=""
+	frameborder="0"
+	class="" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- ENTERATE-->
+  <div class="w3-panel w3-card modal fade" id="ENTERATE">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">ENTÉRATE</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body w3-panel w3-card ">
+
+<p><iframe 	
+	name=""
+	src="CARRUSEL.html"
+	width="80%"
+	height="750px"
+	scrolling=""
+	frameborder="0"
+	class="w3-panel w3-card w3-rounded" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+     
+<!-- CONVENIOS-->
+  <div class="w3-panel w3-card modal fade" id="CONVENIOS">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">INTRANET 2021</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body w3-panel w3-card ">
+
+<p><iframe 	
+	name=""
+	src="CONVENIOS.html"
+	width="100%"
+	height="1300"
+	scrolling=""
+	frameborder="0"
+	class="" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<!-- CAPACITACIÓN-->
+  <div class="w3-panel w3-card modal fade" id="CAPACITACION">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">INTRANET 2021</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body w3-panel w3-card ">
+
+<p><iframe 	
+	name=""
+	src="CAPACITACION.html"
+	width="80%"
+	height="800"
+	scrolling=""
+	frameborder="0"
+	class="" >
+	Ningún Iframe</iframe>
+</p>
+       
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+  </div>  <div>
+<script>
+function griscero() {
+ document.body.style.backgroundImage = "url('')";
+  document.body.style.backgroundColor = "#E0E0E0";
+ }
+</script>
+<script>
+function grisuno() {
+ document.body.style.backgroundImage = "url('')";
+  document.body.style.backgroundColor = "#F0F0F0";
+ }
+</script>
+<script>
+function grisdos() {
+ document.body.style.backgroundImage = "url('')";
+  document.body.style.backgroundColor = "#F5F5F5";
+ }
+</script>
+<script>
+function gristres() {
+ document.body.style.backgroundImage = "url('')";
+  document.body.style.backgroundColor = "#F8F8F8";
+ }
+</script>
+<script>
+function blanco() {
+ document.body.style.backgroundImage = "url('')";
+  document.body.style.backgroundColor = "#FFFFFF";
+ }
+</script>
+
+<script>
+function myFunction5() {
+  document.body.style.backgroundColor = "HEX: #66757F";
+ }
+</script>
+
+<script>
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "convocatorias.html", true);
+  xhttp.send();
+}
+</script>
+
+<script>
+function loadDoc2() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "gastosacomprobar.html", true);
+  xhttp.send();
+}
+</script>
+
+<script>
+function loadDoc3() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "contabilidad.html", true);
+  xhttp.send();
+}
+</script>
+
+<script>
+function loadDoc4() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "MANUALES-2021.html", true);
+  xhttp.send();
+}
+</script>
+
+<script>
+function loadDoc5() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "convocatorias.html", true);
+  xhttp.send();
+}
+</script>
+
+<script>
+function loadDoc6() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "filtrable.html", true);
+  xhttp.send();
+}
+</script>
+
+<script>
+function loadDoc7() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "informacion-fiscal.html", true);
+  xhttp.send();
+}
+</script>
+
+<script>
+$(document).ready(function(){
+ 
+ $("#div1").hide();
+ document.body.style.backgroundImage = "url('images/fondo-abstracto-arco.png')";
+ 
+});
+</script>
+
+
+<script>
+function myFunction() {
+ 
+ document.body.style.backgroundImage = "url('images/centroleon3.jpg')";
+}
+
+function myFunctionuno() {
+  
+  document.body.style.backgroundImage = "url('images/PANTALLA1.jpg')";
+ }
+
+function myFunctiondos() {
+  
+  document.body.style.backgroundImage = "url('images/fondo-abstracto-arco.png')";
+ }
+
+function myFunctiontres() {
+  
+  document.body.style.backgroundImage = "url('images/PANTALLA3.jpg')";
+ }
+
+function myFunctioncuatro() {
+  
+  document.body.style.backgroundImage = "url('images/white-background.jpg')";
+ }
+
+function myFunctioncinco() {
+  
+  document.body.style.backgroundImage = "url('images/PANTALLA.jpg')";
+ }
+
+function myFunctionseis() {
+  
+  document.body.style.backgroundImage = "url('images/fondoondas.jpg')";
+ }
+function myFunctionsiete() {
+  
+  document.body.style.backgroundImage = "url('images/exagonofondo.jpg')";
+ }
+function myFunctionocho() {
+  
+  document.body.style.backgroundImage = "url('images/mural5.png')";
+ }
+</script>
+
+
+<script>
+$(document).ready(function(){
+ 
+
+
+  $("#cierra").click(function(){
+    $("#div1").fadeOut("slow");
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut(4000);
+$("#abre").show(1000);
+
+  });
+
+  $("#abre").click(function(){
+    $("#div1").show("slow");
+    $("#div2").show("slow");
+    $("#div3").show(2000);
+ $("#div4").show(1000);
+
+$("#abre").fadeOut("slow");
+
+  });
+
+
+
+});
+</script>
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+</script>
+
+<script>
+var zoom=1;
+ 
+document.getElementById("mas").addEventListener("click",function(e){
+    zoom+=.10;
+    resize();
+});
+document.getElementById("menos").addEventListener("click",function(e){
+    if(zoom>0.2) {
+        zoom-=.10;
+        resize();
+    }
+});
+ 
+function resize() {
+    document.getElementById("img").style.zoom=zoom;
+    document.getElementById("value").innerHTML="x"+zoom.toFixed(2);
+}
+</script>
+
+
+
+ </div>
+
+ </div>
+
+</body>
+</html>
