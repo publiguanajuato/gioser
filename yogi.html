@@ -1,0 +1,344 @@
+﻿
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+
+.card {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 1050px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 12px;
+}
+.p {
+  color: grey;
+  font-size: 12px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 0px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 20px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+margin-top: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 5%; /* 16:9 Aspect Ratio */
+}
+</style>
+</head>
+<body class="">
+
+<div class="container ">
+ 
+<h2>Responsive Column Cards</h2>
+<p>Resize the browser window to see the effect.</p>
+</div>
+
+<div class="row ">
+
+<div class="column ">
+    <div class="card">
+     <div class="card center">
+  <img src="https://i.pinimg.com/236x/66/97/3c/66973c0dc8a5ee4f2d84e8b8ebabd709.jpg" class="mx-auto d-block img-thumbnail rounded-circle" alt="John" style="width:80%">
+<br>
+  <h6>ESENCIAS</h6>
+  <p class="title">Sai Flora 10 ml</p>
+  <h6>Precio $50. pesos </h6>
+ <h6>Precio $50. pesos </h6>
+
+ 
+
+
+  <a href="#demo1" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
+  <div id="demo1" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>
+
+</div>
+    </div>
+
+<div class="column">
+    <div class="card">
+     <div class="card center">
+  <img src="https://i.pinimg.com/236x/14/76/4f/14764ff157a3ec5de29ea7c6c22b6b41.jpg" class="mx-auto d-block img-thumbnail rounded-circle" alt="John" style="width:50%">
+
+  <div style="margin: 14px 0;">
+   <h6>ESENCIAS</h6>
+    <p class="title">Sai Flora 10 ml</p>
+ <h6>Precio $50. pesos </h6>
+  
+  </div>
+
+
+  <a href="#demo" class="btn btn-primary" data-toggle="collapse">COMPRAR</a>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>
+
+</div>
+    </div>
+
+<div class="column">
+    <div class="card">
+     <div class="card center">
+  <img src="https://i.pinimg.com/236x/a7/dd/3c/a7dd3c62f83842f85f30e16604ec8429.jpg" class="mx-auto d-block img-thumbnail rounded-circle" alt="John" style="width:50%">
+  <h6>ESENCIAS</h6>
+  <p class="title">Sai Flora 10 ml</p>
+  <h6>Precio $50. pesos </h6>
+  <div style="margin: 14px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+
+
+  <a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
+  <div id="demo" class="collapse">
+      <div style="margin: 14px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+
+  </div>
+</div>
+
+</div>
+    </div>
+
+<div class="column">
+    <div class="card">
+     <div class="card center">
+  <img src="https://i.pinimg.com/236x/e0/60/7b/e0607b210533643265986bba1d2fb355.jpg" class="mx-auto d-block img-thumbnail rounded-circle" alt="John" style="width:80%">
+ <h7>Precio $50. pesos </h7>
+  <h7>Precio $50. pesos </h7>
+  <h7>Precio $50. pesos </h7>
+  <div style="margin: 14px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+
+
+  <a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>
+
+</div>
+    </div>
+<div class="column">
+    <div class="card">
+     <div class="card center">
+  <img src="https://i.pinimg.com/564x/0e/d8/27/0ed8272071d7e4fa04a6dbb24c19ac7a.jpg" class="mx-auto d-block img-thumbnail rounded-circle" alt="John" style="width:80%">
+  <h6>ESENCIAS</h6>
+  <p class="title">Sai Flora 10 ml</p>
+  <h6>Precio $50. pesos </h6>
+  <div style="margin: 14px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+
+
+  <a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>
+
+</div>
+    </div>
+
+<div class="column">
+    <div class="card">
+     <div class="card center">
+  <img src="https://i.pinimg.com/564x/b1/66/4a/b1664af4320aaa53b5ffbbc7edf65352.jpg" class="mx-auto d-block img-thumbnail rounded-circle" alt="John" style="width:70%">
+  <h6>ESENCIAS</h6>
+  <p class="title">Sai Flora 10 ml</p>
+  <h6>Precio $50. pesos </h6>
+  <div style="margin: 14px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+
+
+  <a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>
+
+</div>
+    </div>
+
+<div class="column">
+    <div class="card">
+     <div class="card center">
+  <img src="https://i.pinimg.com/564x/21/b2/11/21b211c7ee7802b4a706450322cb7597.jpg" class="mx-auto d-block img-thumbnail rounded-circle" alt="John" style="width:70%">
+  <h6>ESENCIAS</h6>
+  <p class="title">Sai Flora 10 ml</p>
+  <h6>Precio $50. pesos </h6>
+  <div style="margin: 14px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+
+
+  <a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>
+
+</div>
+    </div>
+
+<div class="column">
+    <div class="card">
+     <div class="card center">
+  <img src="https://i.pinimg.com/564x/f8/a3/a4/f8a3a4d3f08542aec871a09625ff9d9c.jpg" class="mx-auto d-block img-thumbnail rounded-circle" alt="John" style="width:70%">
+  <h7>ESENCIAS</h7>
+  <p class="title">Sai Flora 10 ml</p>
+ 
+  <div style="margin: 14px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+
+
+  <a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>
+
+</div>
+    </div>
+
+ </div>
+
+</body>
+</html>
+
