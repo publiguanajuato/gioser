@@ -1,7 +1,9 @@
 
 body {
   background-color: lightblue;
+   background-image: url('pantera.jpg');
 }
+
 
 h1 {
   color: white;
