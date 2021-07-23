@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript" src="actb.js"></script><!-- External script -->
+<script language="javascript" type="text/javascript" src="tablefilter.js"></script>
+
+
+<style>
+	body {margin:0;padding:50px; font-family:"proxima-nova-alt",Helvetica,Roboto,Arial,sans-serif;}
+	
+	h2 {font-size:20px;margin:0 0 10px 0}
+	p {margin:0 0 10px 0}
+	
+	table.width200,table.rwd_auto {border:1px solid #ccc;width:100%;margin:0 0 50px 0}
+		.width200 th,.rwd_auto th {background:#ccc;padding:5px;text-align:center;}
+		.width200 td,.rwd_auto td {border-bottom:1px solid #ccc;padding:5px;text-align:center}
+		.width200 tr:last-child td, .rwd_auto tr:last-child td{border:0}
+		
+	.rwd {width:100%;overflow:auto;}
+		.rwd table.rwd_auto {width:auto;min-width:100%}
+			.rwd_auto th,.rwd_auto td {white-space: nowrap;}
+			
+	@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px)  
+	{
+	
+		table.width200, .width200 thead, .width200 tbody, .width200 th, .width200 td, .width200 tr { display: block; }
+		
+		.width200 thead tr { position: absolute;top: -9999px;left: -9999px; }
+		
+		.width200 tr { border: 1px solid #ccc; }
+		
+		.width200 td { border: none;border-bottom: 1px solid #ccc; position: relative;padding-left: 50%;text-align:left }
+		
+		.width200 td:before {  position: absolute; top: 6px; left: 6px; width: 45%; padding-right: 10px; white-space: nowrap;}
+		
+		.width200 td:nth-of-type(1):before { content: "Nombre"; }
+		.width200 td:nth-of-type(2):before { content: "Apellidos"; }
+		.width200 td:nth-of-type(3):before { content: "Cargo"; }
+		.width200 td:nth-of-type(4):before { content: "Twitter"; }
+		.width200 td:nth-of-type(5):before { content: "ID"; }
+		
+		.descarto {display:none;}
+		.fontsize {font-size:10px}
+	}
+	
+	/* Smartphones (portrait and landscape) ----------- */
+	@media only screen and (min-width : 320px) and (max-width : 480px) 
+	{
+		body { width: 320px; }
+		.descarto {display:none;}
+	}
+	
+	/* iPads (portrait and landscape) ----------- */
+	@media only screen and (min-width: 768px) and (max-width: 1024px) 
+	{
+		body { width: 495px; }
+		.descarto {display:none;}
+		.fontsize {font-size:10px}
+	}
+	
+	</style>
+
+</head>
+<body>
+
+<div class="container">
+ 
+<img src="RENTAVENTA4.gif" style="width:50%" align ="center">  
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#home">INICIO</a></li>
+    <li><a href="#menu1">RENTA</a></li>
+    <li><a href="#menu2">VENTA </a></li>
+    <li><a href="#menu3">CITAS</a></li>
+ <li><a href="#menu3">CONTACTO</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>HOME</h3>
+     <h2><a name="tbl8" id="tbl8"></a>TABLE 8</h2>
+<p>Set the last row always visible and perform a sum operation on 2 columns</p>
+<table id="table8" class="mytable" >
+	<tr>
+		<th>World Regions</th>
+		<th>Population ( 2007 Est.)</th>
+		<th>Population % of World</th>
+		<th>Internet Usage, Latest Data</th>
+		<th>% Population ( Penetration )</th>
+		<th>Usage % of World</th>
+		<th>Usage Growth 2000-2007</th>
+	</tr>
+	<tr>
+		<td>Africa</td>
+		<td>933,448,292</td>
+		<td>14.2 %</td>
+		<td>32,765,700</td>
+		<td>3.5 %</td>
+		<td>3.0 %</td>
+		<td>625.8%</td>
+	</tr>
+	<tr>
+		<td>Asia</td>
+		<td>3,712,527,624</td>
+		<td>56.5 %</td>
+		<td>389,392,288</td>
+		<td>10.5 %</td>
+		<td>35.6 %</td>
+		<td>240.7 %</td>
+	</tr>
+	<tr>
+		<td>Europe</td>
+		<td>809,624,686</td>
+		<td>12.3 %</td>
+		<td>312,722,892</td>
+		<td>38.6 %</td>
+		<td>28.6 %</td>
+		<td>197.6 %</td>
+	</tr>
+	<tr>
+		<td>Middle	East</td>
+		<td>193,452,727</td>
+		<td>2.9 %</td>
+		<td>19,382,400</td>
+		<td>10.0 %</td>
+		<td>1.8 %</td>
+		<td>490.1 %</td>
+	</tr>
+	<tr>
+		<td>North America</td>
+		<td>334,538,018</td>
+		<td>5.1 %</td>
+		<td>232,057,067</td>
+		<td>69.4 %</td>
+		<td>21.2 %</td>
+		<td>114.7 %</td>
+	</tr>
+	<tr>
+		<td>Latin America / Caribbean</td>
+		<td>556,606,627</td>
+		<td>8.5 %</td>
+		<td>88,778,986</td>
+		<td>16.0 %</td>
+		<td>8.1 %</td>
+		<td>391.3 %</td>
+	</tr>
+	<tr>
+		<td>Oceania / Australia</td>
+		<td>34,468,443</td>
+		<td>0.5 %</td>
+		<td>18,430,359</td>
+		<td>53.5 %</td>
+		<td>1.7 %</td>
+		<td>141.9 %</td>
+	</tr>
+	<tr>
+		<td colspan="2">Total:</td>
+		<td id="table8Tot1" style="background-color:#FFFFCC;"></td>
+		<td colspan="2"></td>
+		<td><input id="table8Tot2" type="text" /></td>
+		<td></td>
+	</tr>	
+</table>
+
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+	var table8_Props = 	{							
+							rows_counter: true,
+							loader: true,
+							loader_text: "Filtering data...",
+							col_operation: { 
+												id: ["table8Tot1","table8Tot2"],
+												col: [2,5],
+												operation: ["sum","sum"],
+												write_method: ["innerHTML","setValue"] 
+											},
+							rows_always_visible: [grabTag(grabEBI('table8'),"tr").length]
+						};
+	setFilterGrid( "table8",table8_Props );
+//]]>
+</script>    <img src="img_pulpit.jpg" style="width:100%">    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+    <hr>
+    <p class="act"><b>Active Tab</b>: <span></span></p>
+    <p class="prev"><b>Previous Tab</b>: <span></span></p>
+</div>
+
+<script>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+    $('.nav-tabs a').on('shown.bs.tab', function(event){
+        var x = $(event.target).text();         // active tab
+        var y = $(event.relatedTarget).text();  // previous tab
+        $(".act span").text(x);
+        $(".prev span").text(y);
+    });
+});
+</script>
+
+</body>
+</html>
