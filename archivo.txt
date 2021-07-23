@@ -1,0 +1,1 @@
+Registro1=<p style="text-align:center"><span style="font-size:48px"><strong>Tecnologias <span style="color:#95a5a6">de la Informaci&oacute;n</span> <span style="color:#e74c3c">2021</span></strong></span></p>  <p style="text-align:center"><img src="https://i.pinimg.com/564x/73/f5/50/73f55086e479ef118af04784f0807071.jpg" /></p>
