@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body class="w3-content w3-container  w3-light-grey">
+
 <div class="w3-content w3-card  w3-panel w3-light-grey w3-margin">
   
   <div class="w3-center  w3-container w3-card   w3-light-grey w3-margin" style="width:100%">
@@ -51,3 +58,31 @@ Envíanos un mensaje de WhatsApp</a>
         <div id="map" style="width:100%;height:800px;background:black"></div>
     </div>
   </div>
+
+    
+     
+
+
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(20.598547001929358, -101.18340617281883),
+    zoom: 18,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxhnlVyExDs4vl3uSgZRrKV6MsxGELcbI&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+   
+</div>
+
+
+
+</body>
+</html>
