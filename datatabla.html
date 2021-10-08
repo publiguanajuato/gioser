@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <link href="jquery.dataTables.css" rel="stylesheet" type="text/css" />
+    <script src="jquery.dataTables.js"></script>
+
+
+   
+ 
+ 
+
+    <meta charset=utf-8 />
+    <title>DataTables - JS Bin</title>
+<style>
+body {
+  font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+  margin: 20;
+  padding: 0;
+  color: #333;
+  background-color: lightwhite;
+}
+</style>
+
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #96D4D4;
+}
+
+
+</style>
+<style>
+#example {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#example td, #customers th {
+  border: 0px solid #ddd;
+  padding: 8px;
+}
+
+#example tr:nth-child(even){background-color: #f2f2f2;}
+
+# tr:hover {background-color: #ddd;}
+
+#example th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f2f2f2;
+  color: grey;
+}
+</style>
+
+<script language="javascript" type="text/javascript"> 
+$(document).ready( function () {
+  jQuery.fn.dataTable.Api.register( 'sum()', function ( ) {
+    return this.flatten().reduce( function ( a, b ) {
+      if ( typeof a === 'string' ) {
+        a = a.replace(/[^\d.-]/g, '') * 1;
+      }
+      if ( typeof b === 'string' ) {
+        b = b.replace(/[^\d.-]/g, '') * 1;
+      }
+      return a + b;
+    }, 0);
+  });
+  var table = $('#example').DataTable(
+    {
+      drawCallback: function () {
+        var api = this.api();
+        var total = api.column( 5, {"filter":"applied"}).data().sum();
+        $('#monto').html(total);
+      }
+    });
+} );
+
+</script>
+  </head>
+  <body>
+<h1>NOTARIA 34</h1>
+    <div class="container table table-dark">
+      <table id="example" class="display nowrap" width="100%">
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Servicio</th>
+            <th>Ciudad</th>
+            <th>No.Escritura</th>
+            <th>Fecha</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+
+        <tfoot>
+          <tr>
+            <th>Cliente</th>
+            <th>Servicio</th>
+            <th>Ciudad</th>
+            <th>No.Escritura</th>
+            <th>Fecha</th>
+            <th>Valor</th>
+          </tr>
+        </tfoot>
+
+        <tbody>
+          <tr>
+            <td>Julian Torres lira</td>
+            <td>Poderes y Cartas-Permiso</td>
+            <td>Salamanca</td>
+            <td>661</td>
+            <td>2011/04/25</td>
+            <td>$3,120</td>
+          </tr>
+          <tr>
+            <td>Pedro Gomez Cano</td>
+            <td>Fideicomisos</td>
+            <td>Guanajuato</td>
+            <td>883</td>
+            <td>2011/07/25</td>
+            <td>$5,300</td>
+          </tr>
+          <tr>
+            <td>Ashton Cox</td>
+            <td>Consultoría Jurídica</td>
+            <td>Celaya</td>
+            <td>966</td>
+            <td>2009/01/12</td>
+            <td>$4,800</td>
+          </tr>
+          <tr>
+            <td>Ignacio Perez Razo</td>
+            <td>Contratación de Créditos</td>
+            <td>Guanajuato</td>
+            <td>522</td>
+            <td>2012/03/29</td>
+            <td>$3,600</td>
+          </tr>
+          <tr>
+            <td>Ignacio Perez Razo</td>
+            <td>Testamentos</td>
+            <td>Celaya</td>
+            <td>233</td>
+            <td>2008/11/28</td>
+            <td>$5,300</td>
+          </tr>
+          <tr>
+            <td>Ignacio Perez Razo</td>
+            <td>Constitución de Sociedades</td>
+            <td>Guanajuato</td>
+            <td>631</td>
+            <td>2012/12/02</td>
+            <td>$4,525</td>
+          </tr>
+          <tr>
+            <td>Pablo Gomez Mancera</td>
+            <td>Cotejo de Documentos</td>
+            <td>Guanajuato</td>
+            <td>539</td>
+            <td>2012/08/06</td>
+            <td>$4,080</td>
+          </tr>
+          <tr>
+            <td>Imelda Pérez Lira</td>
+            <td>Poderes y Cartas-Permiso</td>
+            <td>Guanajuato</td>
+            <td>325</td>
+            <td>2010/10/14</td>
+            <td>$6,730</td>
+          </tr>
+          <tr>
+            <td>Jesús Luna Cano</td>
+            <td>Testamentos</td>
+            <td>Guanajuato</td>
+            <td>319</td>
+            <td>2009/09/15</td>
+            <td>$5,000</td>
+          </tr>
+          <tr>
+            <td>Mario Sarmiento Lira</td>
+            <td>Consultoría Jurídica</td>
+            <td>León</td>
+            <td>223</td>
+            <td>2008/12/13</td>
+            <td>$3,600</td>
+          </tr>
+          <tr>
+            <td>Isidro Sánchez Gomez</td>
+            <td>Contratación de Créditos</td>
+            <td>Guanajuato</td>
+            <td>130</td>
+            <td>2008/12/19</td>
+            <td>$5,000</td>
+          </tr>
+          <tr>
+            <td>Imelda Prez Lira</td>
+            <td>Testamentos</td>
+            <td>León</td>
+            <td>22</td>
+            <td>2013/03/03</td>
+            <td>$4,200</td>
+          </tr>
+          <tr>
+            <td>Julio Torres Lira</td>
+            <td>Constitución de Sociedades</td>
+            <td>San Francisco</td>
+            <td>36</td>
+            <td>2008/10/16</td>
+            <td>$5,300</td>
+          </tr>
+          <tr>
+            <td>Haley Kennedy</td>
+            <td> Consultoría Jurídica</td>
+            <td>Salamanca</td>
+            <td>43</td>
+            <td>2012/12/18</td>
+            <td>$4,800</td>
+          </tr>
+          <tr>
+            <td>Imelda Prez Lira</td>
+            <td>Constitución de Sociedades</td>
+            <td>Salamanca</td>
+            <td>19</td>
+            <td>2010/03/17</td>
+            <td>$2,875</td>
+          </tr>
+          <tr>
+            <td>Imelda Prez Lira</td>
+            <td> Consultoría Jurídica</td>
+            <td>Salamanca</td>
+            <td>66</td>
+            <td>2012/11/27</td>
+            <td>$3,750</td>
+          </tr>
+          <tr>
+            <td>Paul Byrd</td>
+            <td>Fideicomisos</td>
+            <td>Guanajuato</td>
+            <td>64</td>
+            <td>2010/06/09</td>
+            <td>$5,000</td>
+          </tr>
+          <tr>
+            <td>Gloria Little</td>
+            <td>Cotejo de Documentos</td>
+            <td>Guanajuato</td>
+            <td>59</td>
+            <td>2009/04/10</td>
+            <td>$3,120</td>
+          </tr>
+          <tr>
+            <td>Julio Torres Lira</td>
+            <td>Poderes y Cartas-Permiso</td>
+            <td>Salamanca</td>
+            <td>41</td>
+            <td>2012/10/13</td>
+            <td>$3,120</td>
+          </tr>
+          <tr>
+            <td>Dai Rios</td>
+            <td>Ratificación de Firmas</td>
+            <td>León</td>
+            <td>35</td>
+            <td>2012/09/26</td>
+            <td>$4,200</td>
+          </tr>
+          <tr>
+            <td>Jenette Caldwell</td>
+            <td>Consultoría Jurídica</td>
+            <td>Guanajuato</td>
+            <td>30</td>
+            <td>2011/09/03</td>
+            <td>$4,965</td>
+          </tr>
+          <tr>
+            <td>Yuri Berry</td>
+            <td>Ratificación de Firmas</td>
+            <td>Guanajuato</td>
+            <td>40</td>
+            <td>2009/06/25</td>
+            <td>$3,600</td>
+          </tr>
+          <tr>
+            <td>Caesar Vance</td>
+            <td>Fideicomisos</td>
+            <td>Guanajuato</td>
+            <td>21</td>
+            <td>2011/12/12</td>
+            <td>$4,965</td>
+          </tr>
+          <tr>
+            <td>Doris Wilder</td>
+            <td>Hipoteca</td>
+            <td>León</td>
+            <td>23</td>
+            <td>2010/09/20</td>
+            <td>$4,965</td>
+          </tr>
+          <tr>
+            <td>Angelica Ramos</td>
+            <td>Ratificación de Firmas</td>
+            <td>Salamanca</td>
+            <td>36</td>
+            <td>2009/10/09</td>
+            <td>$2,875</td>
+          </tr>
+          <tr>
+            <td>Gavin Joyce</td>
+            <td>Constitución de Sociedades</td>
+            <td>León</td>
+            <td>42</td>
+            <td>2010/12/22</td>
+            <td>$4,525</td>
+          </tr>
+          <tr>
+            <td>Jennifer Chang</td>
+            <td>Constitución de Sociedades</td>
+            <td>Salamanca</td>
+            <td>28</td>
+            <td>2010/11/14</td>
+            <td>$4,080</td>
+          </tr>
+          <tr>
+            <td>Brenden Wagner</td>
+            <td>Poderes y Cartas-Permiso</td>
+            <td>San Francisco</td>
+            <td>18</td>
+            <td>2011/06/07</td>
+            <td>$3,750</td>
+          </tr>
+          <tr>
+            <td>Ebony Grimes</td>
+            <td>Poderes y Cartas-Permiso</td>
+            <td>San Francisco</td>
+            <td>48</td>
+            <td>2010/03/11</td>
+            <td>$2,875</td>
+          </tr>
+          <tr>
+            <td>Russell Chavez</td>
+            <td>Consultoría Jurídica</td>
+            <td>León</td>
+            <td>20</td>
+            <td>2011/08/14</td>
+            <td>$3,600</td>
+          </tr>
+          <tr>
+            <td>Michelle House</td>
+            <td>Consultoría Jurídica</td>
+            <td>León</td>
+            <td>37</td>
+            <td>2011/06/02</td>
+            <td>$3,750</td>
+          </tr>
+          <tr>
+            <td>Suki Burks</td>
+            <td>Constitución de Sociedades</td>
+            <td>Salamanca</td>
+            <td>53</td>
+            <td>2009/10/22</td>
+            <td>$2,875</td>
+          </tr>
+          <tr>
+            <td>Prescott Bartlett</td>
+            <td>Fideicomisos</td>
+            <td>Salamanca</td>
+            <td>27</td>
+            <td>2011/05/07</td>
+            <td>$6,730</td>
+          </tr>
+          <tr>
+            <td>Gavin Cortez</td>
+            <td>Fideicomisos</td>
+            <td>San Francisco</td>
+            <td>22</td>
+            <td>2008/10/26</td>
+            <td>$6,730</td>
+          </tr>
+          <tr>
+            <td>Martena Mccray</td>
+            <td>Consultoría Jurídica</td>
+            <td>León</td>
+            <td>46</td>
+            <td>2011/03/09</td>
+            <td>$4,080</td>
+          </tr>
+          <tr>
+            <td>Unity Butler</td>
+            <td> Consultoría Jurídica</td>
+            <td>San Francisco</td>
+            <td>47</td>
+            <td>2009/12/09</td>
+            <td>$3,750</td>
+          </tr>
+          <tr>
+            <td>Howard Hatfield</td>
+            <td>Consultoría Jurídica</td>
+            <td>San Francisco</td>
+            <td>51</td>
+            <td>2008/12/16</td>
+            <td>$4,080</td>
+          </tr>
+          <tr>
+            <td>Hope Fuentes</td>
+            <td>Consultoría Jurídica</td>
+            <td>San Francisco</td>
+            <td>41</td>
+            <td>2010/02/12</td>
+            <td>$4,200</td>
+          </tr>
+          <tr>
+            <td>Vivian Harrell</td>
+            <td>Ratificación de Firmas</td>
+            <td>San Francisco</td>
+            <td>62</td>
+            <td>2009/02/14</td>
+            <td>$4,965</td>
+          </tr>
+          <tr>
+            <td>Timothy Mooney</td>
+            <td>Consultoría Jurídica</td>
+            <td>Salamanca</td>
+            <td>37</td>
+            <td>2008/12/11</td>
+            <td>$4,200</td>
+          </tr>
+          <tr>
+            <td>Jackson Bradshaw</td>
+            <td>Consultoría Jurídica</td>
+            <td>Guanajuato</td>
+            <td>65</td>
+            <td>2008/09/26</td>
+            <td>$5,000</td>
+          </tr>
+          <tr>
+            <td>Miriam Weiss</td>
+            <td>Revocación</td>
+            <td>León</td>
+            <td>64</td>
+            <td>2011/02/03</td>
+            <td>$4,965</td>
+          </tr>
+          <tr>
+            <td>Bruno Nash</td>
+            <td>Poderes y Cartas-Permiso</td>
+            <td>Salamanca</td>
+            <td>38</td>
+            <td>2011/05/03</td>
+            <td>$4,200</td>
+          </tr>
+          <tr>
+            <td>Odessa Jackson</td>
+            <td>Revocación</td>
+            <td>León</td>
+            <td>37</td>
+            <td>2009/08/19</td>
+            <td>$3,600</td>
+          </tr>
+          <tr>
+            <td>Thor Walton</td>
+            <td>Constitución de Sociedades</td>
+            <td>Guanajuato</td>
+            <td>61</td>
+            <td>2013/08/11</td>
+            <td>$3,600</td>
+          </tr>
+          <tr>
+            <td>Finn Camacho</td>
+            <td>Revocación</td>
+            <td>San Francisco</td>
+            <td>47</td>
+            <td>2009/07/07</td>
+            <td>$4,800</td>
+          </tr>
+          <tr>
+            <td>Elton Baldwin</td>
+            <td>Testamentos</td>
+            <td>León</td>
+            <td>64</td>
+            <td>2012/04/09</td>
+            <td>$6,730</td>
+          </tr>
+          <tr>
+            <td>Zenaida Frank</td>
+            <td>Poderes y Cartas-Permiso</td>
+            <td>Guanajuato</td>
+            <td>63</td>
+            <td>2010/01/04</td>
+            <td>$4,800</td>
+          </tr>
+          <tr>
+            <td>Zorita Serrano</td>
+            <td>Poderes y Cartas-Permiso</td>
+            <td>San Francisco</td>
+            <td>56</td>
+            <td>2012/06/01</td>
+            <td>$5,300</td>
+          </tr>
+          <tr>
+            <td>Jennifer Acosta</td>
+            <td>Fideicomisos</td>
+            <td>León</td>
+            <td>43</td>
+            <td>2013/02/01</td>
+            <td>$2,875</td>
+          </tr>
+          <tr>
+            <td>Cara Stevens</td>
+            <td>Hipoteca</td>
+            <td>Guanajuato</td>
+            <td>46</td>
+            <td>2011/12/06</td>
+            <td>$4,800</td>
+          </tr>
+          <tr>
+            <td>Hermione Butler</td>
+            <td>Consultoría Jurídica</td>
+            <td>Salamanca</td>
+            <td>47</td>
+            <td>2011/03/21</td>
+            <td>$4,080</td>
+          </tr>
+          <tr>
+            <td>Jesús Luna Cano</td>
+            <td>Cotejo de Documentos</td>
+            <td>Salamanca</td>
+            <td>21</td>
+            <td>2009/02/27</td>
+            <td>$3,120</td>
+          </tr>
+          <tr>
+            <td>Jonas Alexander</td>
+            <td>Constitución de Sociedades</td>
+            <td>San Francisco</td>
+            <td>30</td>
+            <td>2010/07/14</td>
+            <td>$5,300</td>
+          </tr>
+          <tr>
+            <td>Jesús Luna Cano</td>
+            <td>Constitución de Sociedades</td>
+            <td>León</td>
+            <td>51</td>
+            <td>2008/11/13</td>
+            <td>$5,300</td>
+          </tr>
+          <tr>
+            <td>Michael Bruce</td>
+            <td>Fideicomisos</td>
+            <td>León</td>
+            <td>29</td>
+            <td>2011/06/27</td>
+            <td>$4,080</td>
+          </tr>
+          <tr>
+            <td>Jesús Luna Cano</td>
+            <td>Ratificación de Firmas</td>
+            <td>Guanajuato</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+            <td>$3,120</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <td class="bg-grays-active color-palette"><b>Total </b></td>
+          <td class="bg-teals-active color-palette text-center">
+            <strong id="abiertoEnTiempo"></strong>
+          </td>
+          <td class="bg-teals-active color-palette text-center">
+            <strong></strong>
+          </td>
+          <td class="bg-teals-active color-palette text-center">
+            <strong></strong>
+          </td>
+          <td class="bg-teals-active color-palette text-center">
+            <strong></strong>
+          </td>
+          <td class="bg-teals-active color-palette text-center">
+            <strong id="monto">0</strong>
+          </td>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>
