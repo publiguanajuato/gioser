@@ -2,9 +2,7 @@
 
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
-lib.ssMetadata = [
-		{name:"login2_atlas_", frames: [[0,499,700,484],[0,0,703,497],[0,985,360,200]]}
-];
+lib.ssMetadata = [];
 
 
 // symbols:
@@ -12,24 +10,21 @@ lib.ssMetadata = [
 
 
 (lib.copiaMapadebits11 = function() {
-	this.spriteSheet = ss["login2_atlas_"];
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.copiaMapadebits11);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,700,484);
 
 
 (lib.inversion = function() {
-	this.spriteSheet = ss["login2_atlas_"];
-	this.gotoAndStop(1);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.inversion);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,703,497);
 
 
 (lib.moneyloanremovebgpreview = function() {
-	this.spriteSheet = ss["login2_atlas_"];
-	this.gotoAndStop(2);
-}).prototype = p = new cjs.Sprite();
-// helper functions:
+	this.initialize(img.moneyloanremovebgpreview);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,360,200);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
@@ -6435,7 +6430,7 @@ p.nominalBounds = new cjs.Rectangle(0,193,360,12);
 
 	this.instance = new lib.crecedinero();
 	this.instance.parent = this;
-	this.instance.setTransform(276,321,1,1,0,0,0,180,100);
+	this.instance.setTransform(278,321,1,1,0,0,0,180,100);
 
 	this.instance_1 = new lib.copiaMapadebits11();
 	this.instance_1.parent = this;
@@ -6458,7 +6453,7 @@ p.nominalBounds = new cjs.Rectangle(0,193,360,12);
 	this.shape_11.setTransform(275.5,441.5);
 
 	this.shape_12 = new cjs.Shape();
-	this.shape_12.graphics.bf(cjs.SpriteSheetUtils.extractFrame(ss["login2_atlas_"],1), null, new cjs.Matrix2D(0.75,0,0,0.75,-131.5,-181.5)).s().p("AgEINIAAwZIAJAAIAAQZg");
+	this.shape_12.graphics.bf(img.inversion, null, new cjs.Matrix2D(0.75,0,0,0.75,-131.5,-181.5)).s().p("AgEINIAAwZIAJAAIAAQZg");
 	this.shape_12.setTransform(-3.4,82.6);
 
 	this.shape_13 = new cjs.Shape();
@@ -6504,10 +6499,12 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images2/login2_atlas_.png?1655096537883", id:"login2_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1655096538308", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1655096538308", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1655096538308", id:"an.TextInput"}
+		{src:"images2/copiaMapadebits11.png?1655099009606", id:"copiaMapadebits11"},
+		{src:"images2/inversion.png?1655099009606", id:"inversion"},
+		{src:"images2/moneyloanremovebgpreview.png?1655099009606", id:"moneyloanremovebgpreview"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1655099009606", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1655099009606", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1655099009606", id:"an.TextInput"}
 	],
 	preloads: []
 };
