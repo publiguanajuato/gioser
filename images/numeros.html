@@ -2,19 +2,11 @@
 <html>
 <body>
 
-<h2>JavaScript While Loop</h2>
+<h2>What Can JavaScript Do?</h2>
 
-<p id="demo"></p>
+<p id="demo">JavaScript can change HTML content.</p>
 
-<script>
-let text = "";
-let i = 0;
-while (i < 10) {
-  text += "<br>The number is " + i;
-  i++;
-}
-document.getElementById("demo").innerHTML = text;
-</script>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
 
 </body>
 </html>
